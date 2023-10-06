@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+
+.item-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    /* Efeito de transição ao focar */
+    margin-bottom: 10px;
+    /* Espaçamento inferior */
+}
+
+/* Efeito ao focar nos campos de formulário */
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #3498db;
+    /* Azul Claro */
+}
+
+/* Estilize os links de detalhes */
+a.detalhes {
+    display: inline-block;
+    background-color: #2ecc71;
+    /* Verde Claro */
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    /* Efeito de transição suave */
+}
+
+/* Efeito ao passar o mouse sobre o link de detalhes */
+a.detalhes:hover {
+    background-color: #27ae60;
+    /* Verde mais escuro */
+}
+
+/* Mantenha o título no topo */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    /* Cor do título */
+}
+
+/* Estilize os campos de formulário para responsividade */
+@media screen and (max-width: 600px) {
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+        padding: 10px;
+        font-size: 16px;
+    }
+}

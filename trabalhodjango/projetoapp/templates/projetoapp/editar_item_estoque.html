@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Item do Estoque</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'projetoapp/css/projetoapp.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Item do Estoque</h1>
+
+        
+        <form method="post">
+            
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            
+            <button class="button" type="submit">Salvar Alterações</button>
+        </form>
+    </div>
+</body>
+</html>

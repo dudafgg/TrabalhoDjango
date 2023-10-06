@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <title>Adicionar Item ao Estoque</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'projetoapp/css/projetoapp.css' %}">
+
+</head>
+
+  <body class="container">
+   
+    <h1>Adicionar Item ao Estoque</h1>
+
+    
+    <form method="post" class="item-form">
+      
+      {% csrf_token %}
+
+      
+      {{ form.as_p }}
+
+      <button type="submit" class="button">Adicionar Item</button>
+    </form>
+  </body>
+</html>

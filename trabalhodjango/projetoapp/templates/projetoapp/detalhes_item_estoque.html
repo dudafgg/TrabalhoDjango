@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Item</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'projetoapp/css/projetoapp.css' %}" />
+  </head>
+
+  <body class="container">
+    <h1>Detalhes do Item</h1>
+
+    <p class="item-detail">Nome: <span class="item-info">{{ item.nome }}</span></p>
+
+    <p class="item-detail">Descrição: <span class="item-info">{{ item.descricao }}</span></p>
+
+    <p class="item-detail">Quantidade Disponível: <span class="item-info">{{ item.quantidade }}</span></p>
+
+    <a href="{% url 'editar_item_estoque' item.id %}" class="button">Editar Item</a>
+
+    <a href="{% url 'confirmar_exclusao_item_estoque' item.id %}" class="button">Excluir Item</a>
+  </body>
+</html>

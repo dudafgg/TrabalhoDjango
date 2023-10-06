@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de Itens em Estoque</title>
+    
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'projetoapp/css/projetoapp.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lista de Itens em Estoque</h1>
+   
+      <ul class="item-list">
+        {% for item in itens %}
+          <li class="item">
+            {{ item.nome }} - {{ item.descricao }} - {{ item.quantidade }}
+          
+            <a class="detalhes" href="{% url 'detalhes_item_estoque' item.id %}">Detalhes</a>
+          
+          </li>
+        {% endfor %}
+      </ul>
+      <a class="button" href="{% url 'adicionar_item_estoque' %}">Adicionar Novo Item</a>
+     
+    </div>
+  </body>
+</html>
